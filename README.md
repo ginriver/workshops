@@ -61,6 +61,8 @@ calibration-tracker/
 │   └── settings.json         # Hooks 設定（プロジェクト共有）
 ├── governance-plugin/
 │   └── calibration-team-standards/  # Plugins：チーム標準の一括配布サンプル
+├── labs/
+│   └── lab6-security/        # 将来の拡張 Lab 6（Qoder Security）教材 ※今回は未実施
 └── requirements.txt
 ```
 
@@ -82,6 +84,15 @@ Lab 1〜4 の間もこれらが自動的に効いています（沈黙体験）�
 - Hooks 設定を変更した後は Qoder IDE の再起動が必要です（ホットリロード未対応）。
 - Rules の適用タイプは Qoder Settings → Rules で確認・変更できます（`.qoder/rules/` は git 共有）。
 - `governance-plugin/` は Lab 5 のデモ用サンプルです。Settings → Plugins → Import からローカルフォルダとして読み込めます。
+
+## 将来の拡張 Lab（今回のワークショップでは未実施）
+
+- **`labs/lab6-security/`** — Lab 6: Qoder Security で作る AI コードセキュリティ防线（約 25 分）
+  意図的に脆弱性を含む教材コード 5 件（コマンドインジェクション / SQLインジェクション /
+  パストラバーサル / 安全でないデシリアライゼーション / 機密情報漏えい）、
+  脆弱性実証プレイブック、講師用リファレンスを含む。
+  詳細は [`labs/lab6-security/LAB_GUIDE.md`](labs/lab6-security/LAB_GUIDE.md) を参照。
+  ⚠️ 教材コードは教育目的であり、本番環境へデプロイしないでください。
 
 ## 技術スタック
 

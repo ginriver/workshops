@@ -1,0 +1,12 @@
+=== CALIBRATION CERTIFICATE / 校正証明書 ===
+Certificate No : CERT-2026-0001
+Instrument     : CAL-0001 / Mitutoyo Digimatic Caliper 500-196-30
+Date           : 2026-07-01
+Performed by   : T. Yamamoto
+Reference std. : Gauge block set Grade 0 (JCSS 0012345)
+Environment    : 20.1 degC / 45% RH
+Result         : pass
+Lab            : Example Metrology Center (ISO/IEC 17025 accredited)
+---
+This file is a SAMPLE certificate for the Qoder Security hands-on lab (Lab 6).
+It is used to demonstrate legitimate file download before the path-traversal demo.
