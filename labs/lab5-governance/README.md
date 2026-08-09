@@ -29,7 +29,7 @@ labs/lab5-governance/
 
 1. `bash labs/lab5-governance/enable-governance.sh` を実行
 2. **Qoder IDE を再起動**（Hooks はホットリロード未対応）→ 新規チャット開始
-3. `AGENTS.md` / `.qoder/rules/` / `.qoder/skills/` / `.qoder/settings.json` を開いて種明かし
+3. `AGENTS.md` / `.qoder/rules/` / `.qoder/skills/` / `.qoder/settings.json` を開いて仕組みを説明
 4. Lab 2 と同じようなプロンプトを再実行 → 前後比較（階層化の遵守、pytest 自動実行、テスト必須）
 5. Hooks の体験：`rm -rf` を Agent に依頼（PreToolUse で遮断）/ テストを壊して完了させる（Stop ゲートで拒否）
 6. Plugins：Settings → Plugins → Import で `governance-plugin/calibration-team-standards` を読み込み
