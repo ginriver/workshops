@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.coverage.*
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Env
+.env
+.env.local
+
+# Qoder local-only overrides (shared settings.json IS committed)
+.qoder/settings.local.json
