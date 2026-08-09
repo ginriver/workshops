@@ -1,9 +1,9 @@
 === CALIBRATION CERTIFICATE / 校正証明書 ===
 Certificate No : CERT-2026-0001
-Instrument     : CAL-0001 / Mitutoyo Digimatic Caliper 500-196-30
+Instrument     : CAL-0001 / Sample Precision Instruments Digimatic Caliper SD-150
 Date           : 2026-07-01
 Performed by   : T. Yamamoto
-Reference std. : Gauge block set Grade 0 (JCSS 0012345)
+Reference std. : Gauge block set Grade 0 (traceable to national standard, ref. 0012345)
 Environment    : 20.1 degC / 45% RH
 Result         : pass
 Lab            : Example Metrology Center (internationally accredited calibration laboratory)

@@ -10,7 +10,7 @@ from pydantic import BaseModel, ConfigDict, Field
 class InstrumentBase(BaseModel):
     code: str = Field(..., description="機器ID / 管理番号", examples=["CAL-0001"])
     name: str = Field(..., description="名称", examples=["デジタルノギス"])
-    model: str = Field(..., description="型式", examples=["CD-15APX"])
+    model: str = Field(..., description="型式", examples=["SD-150"])
     serial_number: str = Field(..., description="シリアル番号")
     manufacturer: str = Field(..., description="製造元")
     category: str = Field(..., description="カテゴリ")

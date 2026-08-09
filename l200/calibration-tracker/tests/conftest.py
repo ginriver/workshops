@@ -56,9 +56,9 @@ def sample_instrument_payload() -> dict:
     return {
         "code": "CAL-0001",
         "name": "デジタルノギス",
-        "model": "CD-15APX",
+        "model": "SD-150",
         "serial_number": "SN-20240001",
-        "manufacturer": "ミツトヨ",
+        "manufacturer": "サンプル精密機器",
         "category": "length",
         "measurement_range": "0-150 mm",
         "resolution": "0.01 mm",
