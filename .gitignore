@@ -28,3 +28,6 @@ htmlcov/
 # Env
 .env
 .env.local
+
+# Qoder local-only overrides (shared settings.json IS committed)
+.qoder/settings.local.json

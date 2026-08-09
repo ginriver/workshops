@@ -1,0 +1,10 @@
+{
+  "name": "calibration-team-standards",
+  "version": "1.0.0",
+  "displayName": "Calibration Team Standards",
+  "description": "Bundles the team's skills, hooks and commands so every developer's Qoder follows the same development standards.",
+  "author": {
+    "name": "Alibaba Cloud MNC Japan SA"
+  },
+  "keywords": ["governance", "standards", "workshop", "metrology"]
+}

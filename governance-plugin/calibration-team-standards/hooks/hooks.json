@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|run_in_terminal",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "hooks/block-dangerous-commands.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "hooks/quality-gate.sh",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}
