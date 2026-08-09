@@ -52,16 +52,10 @@ calibration-tracker/
 │   └── seed.py               # サンプルデータ投入スクリプト
 ├── prd/
 │   └── 校正管理システム_要件定義書.md   # Lab 1 の入力となる PRD
-├── AGENTS.md                 # 常時適用のチーム開発規範（Lab 5）
-├── .qoder/
-│   ├── rules/                # Rules：coding-standards / api-design（Lab 5）
-│   ├── skills/
-│   │   └── uncertainty-eval/ # Skills：GUM 不確かさ評価のドメイン知識
-│   ├── hooks/                # Hooks：品質ゲート / 危険コマンド遮断
-│   └── settings.json         # Hooks 設定（プロジェクト共有）
 ├── governance-plugin/
 │   └── calibration-team-standards/  # Plugins：チーム標準の一括配布サンプル
 ├── labs/
+│   ├── lab5-governance/      # ガバナンス層パッケージ（Lab 5 で復元。クローン時は意図的に無効）
 │   └── lab6-security/        # 将来の拡張 Lab 6（Qoder Security）教材 ※今回は未実施
 └── requirements.txt
 ```
@@ -69,21 +63,28 @@ calibration-tracker/
 ## チーム開発規範ガバナンス層（Lab 5）
 
 本リポジトリには、Qoder の拡張機制による「チーム開発規範の強制」サンプルが含まれています。
-Lab 1〜4 の間もこれらが自動的に効いています（沈黙体験）。
+**Before / After の対比**のため、クローン時点ではガバナンス層を `labs/lab5-governance/governance-pack/` に
+パッケージ化してあります（ルートには `.qoder/` も `AGENTS.md` もありません）。
 
-| 機制 | 場所 | 役割 |
+- **Lab 1〜4**：規範「なし」の状態で Qoder を体験（フリー開発）
+- **Lab 5**：`bash labs/lab5-governance/enable-governance.sh` でガバナンス層を復元し、
+  同じようなプロンプトを再実行して前後比較する（復元後は IDE を再起動）
+
+| 機制 | パッケージ内の場所 | 役割 |
 |---|---|---|
-| AGENTS.md | ルート | 常時適用のコア規範（階層化 / テスト必須 / API セマンティクス） |
-| Rules | `.qoder/rules/` | 詳細規範。4 種タイプ（Always Apply / Model Decision / Specific Files / Apply Manually） |
-| Skills | `.qoder/skills/uncertainty-eval/` | GUM 不確かさ評価のドメイン知識。git でチーム共有 |
-| Hooks | `.qoder/settings.json` + `.qoder/hooks/` | 決定的ゲート：Stop で pytest 緑を強制、PreToolUse で `rm -rf` / `git push --force` を遮断 |
+| AGENTS.md | `governance-pack/AGENTS.md`（復元先: ルート） | 常時適用のコア規範（階層化 / テスト必須 / API セマンティクス） |
+| Rules | `governance-pack/qoder-config/rules/` | 詳細規範。4 種タイプ（Always Apply / Model Decision / Specific Files / Apply Manually） |
+| Skills | `governance-pack/qoder-config/skills/uncertainty-eval/` | GUM 不確かさ評価のドメイン知識。git でチーム共有 |
+| Hooks | `governance-pack/qoder-config/settings.json` + `hooks/` | 決定的ゲート：Stop で pytest 緑を強制、PreToolUse で `rm -rf` / `git push --force` を遮断 |
 | Plugins | `governance-plugin/calibration-team-standards/` | Skills + Hooks + Commands を一括パッケージ化し、組織へ一括配布するサンプル |
 
 補足：
 
 - Hooks 設定を変更した後は Qoder IDE の再起動が必要です（ホットリロード未対応）。
-- Rules の適用タイプは Qoder Settings → Rules で確認・変更できます（`.qoder/rules/` は git 共有）。
+- 復元された `.qoder/` と `AGENTS.md` は git 上 untracked として表示されます（演習上問題ありません）。
+- Rules の適用タイプは Qoder Settings → Rules で確認・変更できます。
 - `governance-plugin/` は Lab 5 のデモ用サンプルです。Settings → Plugins → Import からローカルフォルダとして読み込めます。
+- 詳細は [`labs/lab5-governance/README.md`](labs/lab5-governance/README.md) を参照。
 
 ## 将来の拡張 Lab（今回のワークショップでは未実施）
 
